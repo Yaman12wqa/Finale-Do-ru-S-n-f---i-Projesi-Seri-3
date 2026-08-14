@@ -1,15 +1,14 @@
 # SecScan - Web Security Scanner Dashboard
 
-Student: YMAN ALSHEABE
-School No: 23080410056
-
 Academic use only. Run SecScan only against systems you own or have explicit written permission to test.
+
+> Learning status: This is an AI-assisted university project. The repository contains Go, Next.js, TypeScript, Docker, and security-scanning concepts, but their presence is not evidence that the project owner can use or explain them independently. It should not be presented as a resume project until the relevant code has been reviewed and understood.
 
 ## Overview
 
 SecScan is a university Web Programming project that provides a web dashboard for lightweight security scanning. A user submits a target URL, the backend validates it with SSRF protections, runs selected scanner modules in parallel, streams live progress through Server-Sent Events, and produces a scored JSON result plus a downloadable PDF report.
 
-The project is intentionally realistic but explainable: the backend uses Go, Gin, clean service boundaries, a scanner registry, in-memory storage, safe timeouts, and a pluggable CVE adapter. The frontend uses Next.js App Router, TypeScript, and Tailwind CSS.
+The backend uses Go, Gin, service boundaries, a scanner registry, in-memory storage, timeouts, and a pluggable CVE adapter. The frontend uses Next.js App Router, TypeScript, and Tailwind CSS.
 
 ## Tech Stack
 

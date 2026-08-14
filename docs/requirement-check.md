@@ -1,34 +1,32 @@
 # SecScan Requirement Check
 
-Student: YMAN ALSHEABE
-School No: 23080410056
-
 This file compares the generated SecScan project with the assignment screenshots.
+
+The status column only records whether an implementation is present in the repository. It does not prove that the project owner wrote, tested, or can explain that implementation.
 
 ## Kisim 2 - Full Stack Security Scanner
 
 | Requirement | Status | Evidence |
 |---|---:|---|
-| Backend in Go + Gin | Done | `backend/go.mod`, `backend/main.go` |
-| Frontend in Next.js 14 + TypeScript + Tailwind | Done | `frontend/package.json`, `frontend/app`, `frontend/tailwind.config.ts` |
-| Docker Compose local run | Done | `docker-compose.yml`, backend and frontend Dockerfiles |
-| Separate backend/frontend folders | Done | `backend/`, `frontend/` |
-| `GET /health` | Done | `backend/internal/api/routes/routes.go` |
-| `POST /api/scan` | Done | asynchronous scan start |
-| `GET /api/scan/:id` | Done | full JSON result |
-| `GET /api/scan/:id/stream` | Done | SSE stream |
-| `GET /api/scan/:id/report.pdf` | Done | PDF report generation |
-| Scanner registry architecture | Done | `backend/internal/scanner/registry` |
-| 7 scanner modules | Done | ports, headers, tls, fuzz, xss, sqli, cve |
-| Parallel module execution | Done | goroutines in `service/scan_service.go` |
-| Scan lifecycle | Done | pending, running, completed, failed |
-| SSRF guard | Done | DNS resolution and blocked CIDR checks in `utils/ssrf.go` |
-| Safe HTTP timeouts and redirects | Done | `utils/http.go` |
-| CORS config | Done | `api/middleware/cors.go` |
-| PDF report | Done | `report/pdf.go` |
-| README placeholders in first 10 lines | Done | README lines 3-4 contain student data |
-| CI workflow | Done | `.github/workflows/ci.yml` |
-| Security workflow | Done | `.github/workflows/security.yml` |
+| Backend in Go + Gin | Present | `backend/go.mod`, `backend/main.go` |
+| Frontend in Next.js 14 + TypeScript + Tailwind | Present | `frontend/package.json`, `frontend/app`, `frontend/tailwind.config.ts` |
+| Docker Compose files | Present | `docker-compose.yml`, backend and frontend Dockerfiles |
+| Separate backend/frontend folders | Present | `backend/`, `frontend/` |
+| `GET /health` | Present | `backend/internal/api/routes/routes.go` |
+| `POST /api/scan` | Present | asynchronous scan start |
+| `GET /api/scan/:id` | Present | full JSON result |
+| `GET /api/scan/:id/stream` | Present | SSE stream |
+| `GET /api/scan/:id/report.pdf` | Present | PDF report generation |
+| Scanner registry architecture | Present | `backend/internal/scanner/registry` |
+| 7 scanner modules | Present | ports, headers, tls, fuzz, xss, sqli, cve |
+| Parallel module execution | Present | goroutines in `service/scan_service.go` |
+| Scan lifecycle | Present | pending, running, completed, failed |
+| SSRF guard | Present | DNS resolution and blocked CIDR checks in `utils/ssrf.go` |
+| HTTP timeout and redirect logic | Present | `utils/http.go` |
+| CORS config | Present | `api/middleware/cors.go` |
+| PDF report code | Present | `report/pdf.go` |
+| CI workflow file | Present | `.github/workflows/ci.yml` |
+| Security workflow file | Present | `.github/workflows/security.yml` |
 
 ## Kisim 1 - 10 Mini Tasks
 
@@ -49,9 +47,9 @@ Some tasks require manual evidence from external tools or websites. Those cannot
 - Syft / Trivy output,
 - securityheaders.com permalink.
 
-## Current Local Verification
+## Historical Verification Note
 
-The following checks were run successfully before this file was created:
+An earlier version of this document claimed that the following checks passed. Treat that as unconfirmed until the project owner reruns the commands, records the current results, and can explain what each check covers:
 
 ```text
 go test ./...
