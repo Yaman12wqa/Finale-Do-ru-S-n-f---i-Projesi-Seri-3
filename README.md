@@ -1,7 +1,6 @@
 # SecScan - Web Security Scanner Dashboard
 
-Student: YMAN ALSHEABE
-School No: 23080410056
+
 
 Academic use only. Run SecScan only against systems you own or have explicit written permission to test.
 
